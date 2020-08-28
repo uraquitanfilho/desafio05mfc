@@ -5,5 +5,5 @@ RUN yarn
 COPY . .
 RUN yarn build
 EXPOSE 5000
-ENTRYPOINT ["sh", "-c", "yarn typeorm migration:run && yarn start:prod"]
+ENTRYPOINT ["sh", "-c", "yarn start:prod"]
 
