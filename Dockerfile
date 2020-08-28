@@ -10,7 +10,7 @@ WORKDIR /home/node/app
 
 COPY . .
 
-RUN npm install 
+RUN npm install --prod
 
 EXPOSE 3001
 
