@@ -12,7 +12,8 @@ COPY . .
 
 # Install app dependencies
 ENV NPM_CONFIG_LOGLEVEL warn
-RUN npm install 
+RUN npm install --production
+RUN npm build
 
 ENTRYPOINT ["npm","run", "start"]
 
