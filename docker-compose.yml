@@ -1,0 +1,9 @@
+version: '3'
+services:
+  nestjs:
+    build: .
+    container_name: desafio05
+    volumes:
+      - .:/home/node/app
+    ports:
+      - '3001:3001'
