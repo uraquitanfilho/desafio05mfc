@@ -2,7 +2,7 @@ version: '3'
 services:
   nestjs:
     build: .
-    container_name: des05
+    container_name: desafio
     volumes:
       - .:/home/node/app
     ports:
