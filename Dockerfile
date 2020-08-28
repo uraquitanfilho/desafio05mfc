@@ -1,19 +1,9 @@
-FROM node:12.14.0-alpine3.11
-
-RUN apk add --no-cache openssl
-
-
-RUN mkdir -p /home/node/app
-
-WORKDIR /home/node/app
-
-COPY package*.json ./
+FROM node:10-alpine
+WORKDIR /app
+COPY ${PWD}/package.json ./
+RUN yarn
 COPY . .
-
-# Install app dependencies
-ENV NPM_CONFIG_LOGLEVEL warn
-RUN npm install --production
-RUN npm build
-
-ENTRYPOINT ["npm","run", "start"]
+RUN yarn build
+EXPOSE 5000
+ENTRYPOINT ["sh", "-c", "yarn typeorm migration:run && yarn start:prod"]
 
