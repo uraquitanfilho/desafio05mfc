@@ -18,5 +18,5 @@ EXPOSE 8081
 
 VOLUME /home/node/app
 
-CMD ["npm","run", "start:prod"]
+CMD ["npm","run", "start"]
 
