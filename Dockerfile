@@ -6,6 +6,8 @@ EXPOSE 3000
 
 VOLUME /home/node/app
 
+COPY package*.json ./
+
 RUN mkdir -p /home/node/app
 
 WORKDIR /home/node/app
