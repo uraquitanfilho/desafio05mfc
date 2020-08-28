@@ -16,5 +16,5 @@ EXPOSE 3001
 
 VOLUME /home/node/app
 
-CMD ["npm","run", "start"]
+ENTRYPOINT ["npm","run", "start"]
 
