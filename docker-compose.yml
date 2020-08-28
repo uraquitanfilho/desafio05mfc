@@ -6,4 +6,4 @@ services:
     volumes:
       - .:/home/node/app
     ports:
-      - '8088:8081'
+      - '3001:3001'

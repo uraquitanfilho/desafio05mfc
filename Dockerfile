@@ -10,11 +10,9 @@ WORKDIR /home/node/app
 
 COPY . .
 
-RUN npm install --prod
+RUN npm install 
 
-RUN npm run build
-
-EXPOSE 8081
+EXPOSE 3001
 
 VOLUME /home/node/app
 
